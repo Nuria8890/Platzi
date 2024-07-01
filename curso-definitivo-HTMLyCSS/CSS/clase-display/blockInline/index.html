@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display block, inline, inline-block</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Display block: utiliza el 100% del width de su contenedor. Se puede agregar margin en las cuatro posiciones. -->
+    <div class="block-element">Esta es una etiqueta div</div>
+    <p class="block-element">Esta es una etiqueta de párrafo</p>
+    <div class="block-element">
+        <p>Soy texto</p>
+        <p>Soy texto</p>
+        <p>Soy texto</p>
+    </div>
+
+    <!-- Display inline: utiliza el width que ocupa su contenido, y si queda espacio, la siguiente etiqueta con display inline la pondrá después, no debajo. No se le puede agregar margin ni arriba ni abajo, ni se puede manipular el widht y el height de los elementos. -->
+    <span>Soy una etiqueta span</span>
+    <span>Soy una etiqueta span</span>
+
+    <!-- Display inline-block: es una fusión del display inline y el display block. De inline: utiliza el width que ocupa su contenido. De block: se puede agregar margin en las cuatro posiciones. -->
+    <ul class="nav">
+        <li>Home</li>
+        <li>Cursos</li>
+        <li>Instructores</li>
+        <li>Blog</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsive</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 426px)">    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 769px)">
+    <!-- estilos, fuentes -->
+</head>
+<body>
+    <header>
+        <nav class="nav-hamb">
+            <input id="checkbox" type="checkbox"> 
+            <label for="checkbox"><img class="img_logo" src="./img/hm-logo.png" alt="logo de H&M con el fondo negro y letras rojas">
+            </label>
+            <ul>
+                <li>   
+                    <label for="mujer">
+                        <a href="#mujer">Mujer </a>
+                    </label>
+                </li>
+                <li>
+                    <label for="hombre">
+                        <a href="#hombre">Hombre</a>
+                    </label></li>
+                <li>
+                    <label for="bebe">
+                        <a href="#bebe">Bebé</a>
+                    </label>
+                    </li>
+                <li>
+                    <label for="ninos">
+                        <a href="#ninos">Niños</a>
+                    </label>
+                </li>
+                <li>
+                    <label for="home">
+                        <a href="#home">H&M Home</a>
+                    </label>
+                </li>
+                <li>
+                    <label for="beauty">
+                        <a href="#beauty">Beauty</a>
+                    </label>
+                </li>
+                <li>
+                    <label for="sport">
+                        <a href="#sport">Sport</a>                        </a>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+        
+        <nav class="nav-ppal">
+            <ul>
+                <li>Usuario</li>
+                <li>Favoritos</li>
+                <li>Cesta</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="video">
+            <video controls preload="auto" autoplay muted loop>
+                <source src="./video/h&m_video.mp4">
+            </video>
+        </div>
+        <section class="fotos">
+            <figure id="mujer">
+                <img src="./img/hm-mujer-traje.jpg" alt="traje de mujer gris a cuadros">
+                <img src="./img/hm-mujer-vestido.jpeg" alt="vestido beige">
+            </figure>
+            <hr>
+            <figure id="hombre">
+                <img src="./img/hm-hombre-traje.jpg" alt="traje beige de hombre">
+                <img src="./img/hm-hombre-camisa.webp" alt="camisa de hombre con flores amarillas">
+            </figure>
+            <hr>
+            <figure id="bebe">
+                <img src="./img/hm-bebe-osito.jpeg" alt="pelele con forma de osito">
+                <img src="./img/hm-bebe-minie.jpeg" alt="chandal de bebé con estampado de mikie y minie">
+                <img src="./img/hm-bebe-premama.jpeg" alt="ropa premama">
+            </figure>
+            <hr>
+            <figure id="ninos">
+                <img src="./img/hm-niño-fantasma.jpeg" alt="chandal de niño negro con estampado de fantasma">
+                <img src="./img/hm-niño-patrulla.jpeg" alt="chandal de niño amarillo con estampado de la patrulla canina">
+                <img src="./img/hm-niño-tigreoso.jpg" alt="sudaderas de tigre y oso">
+                <img src="./img/hm-niño-traje.jpg" alt="camisa blanca y pantalon beige de niño">
+            </figure>
+            <hr>
+            <figure id="home">
+                <img src="./img/hm-home.jpeg" alt="salón completo">
+            </figure>
+            <hr>
+            <figure id="beauty">
+                <img src="./img/hm-beauty.jpeg" alt="complementos beauty">
+            </figure>
+            <hr>
+            <figure id="sport">
+                <img src="./img/hm-sport-chico.jpeg" alt="conjunto sport azul marino chico">
+                <img src="./img/hm-sport-chica.jpg" alt="conjunto sport negro para mujer">
+                <img src="./img/hm-sport-varios.jpg" alt="varias prendas de sport">
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <div class="desplegable">
+            <select class="ayuda">
+                <option>Ayuda</option>
+                <option>Atención al cliente</option>
+                <option>Mi cuenta</option>
+                <option>Contáctanos</option>
+            </select>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/hm/" target="_blank">
+                <img class="img_instagram" src="./img/Instagram_logo.svg.png" alt="instagram">
+            </a>
+            <a href="https://www.youtube.com/channel/UCoc8tpGCY1wrp8pV7mI0scA" target="_blank">
+                <img class="img_youtube" src="./img/youtube_logo.png" alt="youtube">
+            </a>
+            <a href="https://www.pinterest.co.uk/hm/" target="_blank">    
+                <img class="img_pinterest" src="./img/pinterest_logo.png" alt="pinterest">
+            </a>
+            <a href="https://www.facebook.com/espanahm/?locale=es_ES" target="_blank">
+                <img class="img_facebook" src="./img/Facebook_logo.png" alt="facebook">
+            </a>
+        </div>
+    </footer>
+    <!-- 
+    <main>
+        <section>
+            <article></article>
+        </section>
+        <p></p>
+        <h1></h1>
+        
+        <figure>
+            <img src="" alt="" figcaption="" title="">
+        </figure>
+        <form action="">
+            <label for="nombre">
+                <span>¿Cual es tu nombre?</span>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="John Cárdenas" required/>
+            </label>
+            <label for="correo">
+                <span>¿Cuál es tu correo?</span>
+                <input type="email" name="correo" id="correo" autocomplete="email" placeholder="micorreo@micorreo.com" required />
+            </label>
+            <label for="pais">
+                <span>¿En que país vives?</span>
+                <input type="text"name="pais" id="pais" autocomplete="country" placeholder="Spain" required />
+            </label>
+            <label for="cp">
+                <span>¿Cuál es tu código postal?</span>
+                <input type="text" name="cp" id="cp" autocomplete="postal-code" required />
+            </label>
+            </form>
+            <label for="inicio-platzi">
+                <span>¿Que día comenzaste en Platzi?</span>
+                <input type="date" id="inicio-platzi" />
+            </label>
+            <label for="horario">
+                <span>¿En que horario estudias?</span>
+                <input type="time" id="horario" />
+            </label>
+            <input list="cursos" />
+            <datalist id="cursos">
+                <option value="JavaScript"></option>
+                <option value="HTML5"></option>
+                <option value="CSS3"></option>
+                <option value="Web Standards"></option>
+            </datalist>
+            <input type="submit" value="Enviar formulario" />
+        </form>
+    </main>
+    <footer>
+    </footer> -->
+</body>
+</html>

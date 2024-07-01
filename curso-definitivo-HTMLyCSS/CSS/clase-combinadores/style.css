@@ -1,0 +1,19 @@
+/* Combinador hermano adyacente o cercano */
+.hermano-adyacente h2 + p { /* aplica la siguiente regla a todas las etiquetas p que estén cerca (debajo) de una etiqueta h2 */
+    color: red;
+}
+
+/* Combinador hermano general */
+.hermano-general h2 ~ p { /* aplica la siguiente regla a todas las etiquetas p que sean hermanas de una etiqueta h2 */
+    color: blue;
+}
+
+/* Combinador hijo */
+.hijo div > p { /* aplica la siguiente regla a todas las etiquetas p que sean hijas directas de una etiqueta div */
+    color: green;
+}
+
+/* Combinador descendiente */
+.descendiente article p { /* aplica la siguiente regla a todas las etiquetas p que esten dentro de una etiqueta article */
+    color: blueviolet;
+}

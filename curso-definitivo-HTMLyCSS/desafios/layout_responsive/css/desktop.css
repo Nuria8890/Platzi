@@ -1,0 +1,26 @@
+.img_logo {
+  width: 80%;
+}
+
+#checkbox:checked ~ ul {
+  margin-top: 10%;
+}
+
+video {
+  border-radius: 10%;
+  width: 20%;
+}
+
+
+.fotos img {
+  width: 50%;
+  max-width: 35rem;
+}
+
+.ayuda {
+  width: 15%;
+}
+.redes a {
+  width: 5%;
+  height: 5%;
+}

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: purple;
+}
+section {
+    width: 80%; /* Siempre va a ocupar el 80% de la pantalla */
+    min-width: 320px; /* Section nunca va a ser más pequeño que 320px. Cuando llegue a esta medida, section no segurá adaptándose al tamaño de la pantalla y ocupará el 100% en vez del 80% */
+    max-width: 500px; /* Section nunca va a ser más grande que 500px. Mientras va llegando a ese tamaño, estará ocupando el 80% de la pantalla y, cuando llegue, section no segurá adaptándose al tamaño de la pantalla*/
+    min-height: 500px; /* Tu altura mínima va a ser 500px, pero si tienes un contenido que excede de este tamaño, crece con tu contenido hasta que el contenido deje de crecer*/
+    margin: 0 auto; /* arriba y abajo 0, derecha e izquierda automático para que quede entrado */
+    background-color: red;
+
+}

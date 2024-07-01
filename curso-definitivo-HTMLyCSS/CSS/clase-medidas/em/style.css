@@ -1,0 +1,7 @@
+/* em (elemento) toma el tamaño de fuente que tiene el padre directo*/
+.section-em {
+    font-size: 1.5em; /* 16px (tamaño estandar en html) * 1.5em =24px */
+}
+.section-em div {
+    font-size: 1.5em; /* 24px * 1.5em = 36px // 36px * 1.5rem = 54px . . . */
+}

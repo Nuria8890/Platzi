@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+.contenedor {
+    margin: 5rem 10rem;
+    display: grid;
+    place-items: center;
+}
+
+.titulo {
+    width: 15rem;
+    height: 5rem;
+    background-color: red;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    position: relative;
+    top: 2.5rem;
+    display: grid;
+    place-content: center;
+}
+
+.texto {
+    max-width: 27rem;
+    min-height: 20rem;
+    padding: 3rem;
+    background-color: rgba(195, 194, 194, 0.865);
+    border: 0.1rem solid black;
+    border-radius: 2.5rem;
+    display: grid;
+    place-content: center;
+}

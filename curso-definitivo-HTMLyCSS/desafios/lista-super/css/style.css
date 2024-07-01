@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(250, 247, 244, 0.782);
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    margin-left: 1rem;
+    /* min-width: 96rem; */
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+img {
+    max-width: 10rem;
+    max-height: 10rem;
+} 
+
+section{
+    margin: 2rem;
+    font-size: 3rem;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tipo {
+    margin: 1rem;
+    padding: 1rem;
+    color: blueviolet;
+}
+
+ol li {
+    margin: 0.5rem 0rem;
+    min-width: 27rem;
+}
+.tipo::marker {
+    color: blueviolet;
+} 
+
+a {
+    text-decoration: none;
+}
+
+.fruta a {
+    color: orange;
+}
+.fruta::marker {
+    color: orange;
+}
+.fruta a:hover {
+    background-color: rgb(102, 0, 255);
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+.fruta a:active {
+    font-size: 3.5rem;
+}
+
+.carne a {
+    color: brown;
+}
+.carne::marker{
+    color: brown;
+}
+.carne a:hover {
+    background-color: rgb(102, 0, 255);
+    border-radius: 1rem;
+    padding: 0.3remx;
+}
+.carne a:active {
+    font-size: 3.5rem;
+}
+
+.verdura a {
+    color: green;
+}
+.verdura::marker {
+    color: green;
+}
+.verdura a:hover {
+    background-color: rgb(102, 0, 255);
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+.verdura a:active {
+    font-size: 3.5rem;
+}

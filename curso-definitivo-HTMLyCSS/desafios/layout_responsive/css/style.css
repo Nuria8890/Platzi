@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    background-color: aliceblue;
+}
+:root {
+    --transition: 0.4s;
+}
+
+header {
+    width: 100%;
+    height: max-content;
+    padding: 2px 0;
+    display: flex;
+}
+
+.nav-hamb {
+    width: 20%;
+    display: flex;
+    justify-content: start;
+}
+
+.img_logo {
+    width: 100%;
+    border-radius: 30px;
+}
+
+#checkbox {
+    display: none;
+}
+#checkbox:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    margin-left: 0px;
+}
+.nav-hamb ul {
+    position: absolute;
+    min-width: 30%;
+    background-color: rgb(218, 49, 49);
+    border-radius: 9px;
+    font-size: 20px;
+    display: none;
+    gap: 10px;
+    font-weight: bold;
+    list-style: none;
+    padding: 10px;
+    padding-right: 60px;
+}
+.nav-hamb ul li {
+    padding: 5px;
+}
+label a {
+    text-decoration: none;
+    color: black;
+}
+.nav-hamb ul li label a:hover {
+    color: white;
+    transition: var(--transition);
+}
+
+.nav-ppal {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+}
+.nav-ppal ul {
+    list-style: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.nav-ppal ul li {
+    padding: 1px;
+    border-radius: 5px;
+}
+.nav-ppal ul li:hover {
+    background-color: red;
+    transition: var(--transition);
+}
+.nav-ppal ul li::after {
+    content: " | ";
+}
+
+.video {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0px;
+}
+video {
+    width: 50%;
+    min-width: 30rem;
+    border-radius: 20%;
+}
+
+.fotos figure { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.fotos img {
+    width: 80%;
+    min-width: 30rem;
+    margin: 10px;
+    border-radius: 35%;
+}
+
+
+
+footer {
+    background-color: black;
+    border-radius: 30px;
+    padding: 5px 0;
+}
+.desplegable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ayuda {
+    width: 50%;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.redes a {
+    width: 20%;
+    height: 20%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes a img:hover {
+    opacity: 0.8;
+    transition: var(--transition);
+}
+.img_instagram {
+    width: 70%;
+}
+.img_youtube {
+    width: 80%;    
+}
+.img_pinterest {
+    width: 90%;
+
+}
+.img_facebook {
+    width: 70%;
+} 
+
+
+/*
+pseudoelementos
+combinadores (+ ~ >)
+max y min width y height
+position static absolut relative
+fixed y sticky
+display block inline inline-block
+display flex
+flexbox layouts: flex grow, flex basis, align-items: strech, baseline, order
+variables :root
+web fonts
+media queries
+*/

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Label, Alt, Title</title>
+</head>
+<body>
+  <main>
+    <!-- Son buenas prácticas utilizar label, porque al pinchar en el span, directamente entra en el input. Para problemas visuales, esto facilita mucho al usuario -->
+    <form action="">  
+      <label for="name">
+        <span>¿Cuál es tu nombre?</span>
+        <input id="name" type="text">
+      </label>
+      <label for="started-studied">
+        <span>¿Qué día comenzaste en Platzi?</span>
+        <input id="started-studied" type="date">
+        <label for="time-to-study">
+          <span>¿En qué horario estudias?</span>
+          <input id="time-to-study" type="time">
+        </label>
+      </label>
+    </form>
+    <!-- Son buenas prácticas rellenar el alt, porque las personas con problemas visuales no siempre pueden ver las imágenes, y su software lee el alt-->
+    <section>
+      <img src="../../desafios/lista-super/imagenes/tinified/limon.jpg" alt="un limón cortado a la mitad" title="Es una foto de un limón">
+    <!-- Al rellenar el title, si haces hover en la imagen, sale la descripción-->
+    </section>
+  </main>
+</body>
+</html>

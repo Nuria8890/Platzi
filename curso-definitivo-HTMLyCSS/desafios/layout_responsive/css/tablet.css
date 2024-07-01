@@ -1,0 +1,23 @@
+.nav-hamb ul {
+  font-size: 30px;
+}
+
+.nav-ppal ul {
+  font-size: 3rem;
+}
+
+video {
+  border-radius: 10%;
+  width: 40%;
+}
+.fotos img {
+  width: 50%;
+  max-width: 35rem;
+}
+.ayuda {
+  width: 25%;
+}
+.redes a {
+  width: 10%;
+  height: 10%;
+}

@@ -1,0 +1,11 @@
+html {
+    font-size: 62.5%; /* Al indicar este tamaño de fuente en html, 16px = 1.6rem. Así es más sencillo usar rem */
+}
+
+/* rem () toma el tamaño fuente que aparece en la etiqueta root(en este caso, nuestro html) */
+.section-rem {
+    font-size: 1.6rem;
+}
+.section-rem div {
+    font-size: 1.6rem;
+}
