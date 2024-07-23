@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  }
+html {
+  font-size: 62.5%;
+  }
+
+  header{
+    margin: 2rem;
+  }
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 5rem;
+  color: red;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+}
+
+#fila-1,
+#fila-2,
+#fila-3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+input {
+  margin: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.7rem;
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+input:hover,
+input:focus {
+  border: 0.5rem red solid;
+}
+
+
+button {
+  font-size: 1.5rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  width: 35%;
+  height: 3rem;
+  border: 0.2rem red solid;
+  border-radius: 0.7rem;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(237, 57, 57);
+  font-size: large;
+}
+
