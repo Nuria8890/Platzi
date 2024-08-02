@@ -9,27 +9,38 @@ console.log('La palaba oculta es: ' + palabraOculta);
 
 //Array con las letras de la palabra oculta:
 let letrasOcultas = palabraOculta.split('');
-console.log(letrasOcultas)
+console.log("Las letras ocultas son: ", letrasOcultas);
+
+$(':input').keyup(function(){
+    $(this).parent().next().children().focus();
+})
 
 $('#boton').click(function(){
   console.log('Has pulsado en "enviar palabra"');
   
-  let filas = [".fila-1", ".fila-2", ".fila-3" ];
+  let filas = [".fila-1", ".fila-2", ".fila-3", ".fila-4", ".fila-5"];
   
   filas.forEach((fila)=> {
     $(fila).each(function(index) {
-      let letra = $( this ).val();
+      let letra = $(this).val();
 
-      console.log(index + ': ' + $( this ).val()); // Pinta el valor de los inputs con un índice.
+      console.log(index + ': ' + $(this).val()); // Pinta el valor de los inputs con un índice.
 
-      if (letra == letrasOcultas[index]) { // Si letra está en letrasOcultas[índice de letra], ejecuta el código.
+      if (letra === "") {
+        console.log("entra por aqui")
+        // alert("Por favor, escribe una palabra");
+      } else if (letra == letrasOcultas[index]) { // Si letra está en letrasOcultas[índice de letra], ejecuta el código.
+        console.log("entra en verde",$(this));
         $(this).css('background-color', 'green');
       } else if (letrasOcultas.includes(letra)) { // Si en letrasOcultas está incluida letra, ejecuta el código.
+        console.log("entra en amarillo",$(this));
         $(this).css('background-color', 'yellow');
       } else {
-        $(this).css('background-color', 'white');
+        console.log("entra en gris",$(this));
+        $(this).css('background-color', 'grey');
       }
-    });
+    }
+    );
     
     
   });
@@ -38,8 +49,8 @@ $('#boton').click(function(){
 
 
 
-//if (palabraDelUsuario == palabraOculta) {
-//  alert("Enhorabuena!! Has adivinado la palabra oculta 😎");
-//} else {
-//  alert(`Oooohhh has perdido!!! La palabra era ${palabraOculta}. Inténtalo de nuevo 😉`);
-//}
+if (palabraDelUsuario == palabraOculta) {
+  alert("Enhorabuena!! Has adivinado la palabra oculta 😎");
+} else {
+  alert(`Oooohhh has perdido!!! La palabra era ${palabraOculta}. Inténtalo de nuevo 😉`);
+}
