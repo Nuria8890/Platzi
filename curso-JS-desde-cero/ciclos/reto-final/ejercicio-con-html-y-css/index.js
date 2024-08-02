@@ -11,9 +11,14 @@ console.log('La palaba oculta es: ' + palabraOculta);
 let letrasOcultas = palabraOculta.split('');
 console.log("Las letras ocultas son: ", letrasOcultas);
 
+
+// Pasa de un input al siguiente cuando levanto el dedo de la tecla
 $(':input').keyup(function(){
     $(this).parent().next().children().focus();
-})
+    // de donte estoy (this, que es el input), busca a mi padre (label), pasa al hermano (next, que es el siguienet label), entra en él y busca a su hijo (children, que es el input), y accede a él para poder escribir (focus)
+});
+
+
 
 $('#boton').click(function(){
   console.log('Has pulsado en "enviar palabra"');
