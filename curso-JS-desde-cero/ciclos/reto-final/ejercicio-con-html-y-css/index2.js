@@ -55,6 +55,11 @@ function compruebaLetraCorrecta(inputs){
   });
 };
 
+function habilitaSiguienteFila(){
+  console.log("Función habilitaSiguienteFila")
+  $(filas[filaActual+1]).removeAttr('disabled');
+};
+
 $('#boton').click(function(){
   let inputsFilaActual = $(filas[filaActual]); // $('.fila-0')
   
@@ -63,6 +68,7 @@ $('#boton').click(function(){
   if(compruebaFilaVacia(inputsFilaActual) == false) {
     console.log("La fila está completa");
     compruebaLetraCorrecta(inputsFilaActual)
+    habilitaSiguienteFila();
   } else {
     alert("Por favor, introduce una palabra")
   }
