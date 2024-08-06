@@ -25,11 +25,11 @@ $(':input').keyup(function(){
 $('#boton').click(function(){
   console.log('Has pulsado en "enviar palabra"');
 
-  let filas = [".fila-1", ".fila-2", ".fila-3", ".fila-4", ".fila-5"];
+  let filas = [".fila-0", ".fila-1", ".fila-2", ".fila-3", ".fila-4"];
 
-  filas.forEach((fila)=> {
+  filas.forEach((fila)=> { // $fila = '.fila-0'
 
-    $(fila).each(function(index) {
+    $(fila).each(function(index) { // $('.fila-0').each ... -> cada input
 
       let letra = $(this).val();
 

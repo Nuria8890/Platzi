@@ -16,12 +16,29 @@ let filas = [".fila-0", ".fila-1", ".fila-2", ".fila-3", ".fila-4"];
 let filaActual = 0;
 
 function compruebaFilaVacia(inputs) {
-  console.log("Función compruebaFilaVacia. Estoy en la fila ", filaActual, " y los input son: ", inputs);
+  console.log("Función compruebaFilaVacia. Estoy en la fila ", filaActual, " y los input son: ", inputs); // $('.fila-0')
+  
+let letraVacia = false
 
+  inputs.each(function(index){
+    let letra = $(this).val();
+
+    if(letra === "") {
+      letraVacia = true
+      console.log("Hay una letra vacía ",index, letraVacia)
+    } else {
+      //letraVacia = false
+      console.log("No hay letra vacía ", index, letraVacia)
+    }
+  })
+
+  console.log("¿Hay alguna letra vacía?", letraVacia);
+  return letraVacia
 }
 
+
 $('#boton').click(function(){
-  let inputsFilaActual = $(filas[filaActual])
+  let inputsFilaActual = $(filas[filaActual]) // $('.fila-0')
   compruebaFilaVacia(inputsFilaActual)
 
 })
