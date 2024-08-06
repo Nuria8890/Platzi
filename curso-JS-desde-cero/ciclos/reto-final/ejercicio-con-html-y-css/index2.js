@@ -60,6 +60,7 @@ function habilitaSiguienteFila(){
   $(filas[filaActual+1]).removeAttr('disabled');
 };
 
+
 $('#boton').click(function(){
   let inputsFilaActual = $(filas[filaActual]); // $('.fila-0')
   
@@ -69,6 +70,7 @@ $('#boton').click(function(){
     console.log("La fila está completa");
     compruebaLetraCorrecta(inputsFilaActual)
     habilitaSiguienteFila();
+    filaActual++;
   } else {
     alert("Por favor, introduce una palabra")
   }
