@@ -18,27 +18,52 @@ let filaActual = 0;
 function compruebaFilaVacia(inputs) {
   console.log("Función compruebaFilaVacia. Estoy en la fila ", filaActual, " y los input son: ", inputs); // $('.fila-0')
   
-let letraVacia = false
+let letraVacia = false;
 
   inputs.each(function(index){
     let letra = $(this).val();
 
     if(letra === "") {
-      letraVacia = true
-      console.log("Hay una letra vacía ",index, letraVacia)
+      letraVacia = true;
+      console.log("Hay una letra vacía ",index, letraVacia);
     } else {
-      //letraVacia = false
-      console.log("No hay letra vacía ", index, letraVacia)
-    }
-  })
+      console.log("No hay letra vacía ", index, letraVacia);
+    };
+  });
 
   console.log("¿Hay alguna letra vacía?", letraVacia);
-  return letraVacia
-}
+  return letraVacia;
+};
 
+function compruebaLetraCorrecta(inputs){
+  console.log("Función compruebaLetraCorrecta. Estoy en la fila ", filaActual, " y los input son ", inputs);
+
+  inputs.each(function(index) {
+    let letra = $(this).val();
+    console.log(index, ": ", letra);
+  
+    if (letra === letrasOcultas[index]) {
+      console.log("Entra en verde")
+      $(this).css('background-color', 'green');
+    } else if (letrasOcultas.includes(letra)) {
+      console.log("Entra en amarillo")
+      $(this).css('background-color', 'yellow');
+    } else {
+      console.log("Entra en gris")
+      $(this).css('background-color', 'grey');
+    };
+  });
+};
 
 $('#boton').click(function(){
-  let inputsFilaActual = $(filas[filaActual]) // $('.fila-0')
-  compruebaFilaVacia(inputsFilaActual)
+  let inputsFilaActual = $(filas[filaActual]); // $('.fila-0')
+  
+  compruebaFilaVacia(inputsFilaActual);
 
-})
+  if(compruebaFilaVacia(inputsFilaActual) == false) {
+    console.log("La fila está completa");
+    compruebaLetraCorrecta(inputsFilaActual)
+  } else {
+    alert("Por favor, introduce una palabra")
+  }
+});
