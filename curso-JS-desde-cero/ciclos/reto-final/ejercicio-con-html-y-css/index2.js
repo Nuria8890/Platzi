@@ -37,25 +37,35 @@ function compruebaFilaVacia(inputs) {
   return letraVacia; // Devuelve el valor de la variable para luego hacer más cosas en la función click.
 };
 
-// Función para comprobar si alguna letra es correcta y colorearla del color que corresponda:
-function compruebaLetraCorrecta(inputs){
-  console.log("Función compruebaLetraCorrecta. Estoy en la fila ", filaActual, " y los input son ", inputs);
-
-  inputs.each(function(index) { // Va recorriendo uno a uno los inputs de html en la fila que corresponde.
+// Función que devuelve las letras introducidas por el usuario:
+function letrasDelUsuario(inputs){
+  let letras = [];
+  inputs.each(function() { // Va recorriendo uno a uno los inputs de html en la fila que corresponde.
     let letra = $(this).val(); // La letra es el valor del input que está recorriendo en ese momento (this).
-    console.log(index, ": ", letra); // devuelve con un índice cada una de las letras.
+  console.log("Cada letra del usuario es: ", letra);
+  letras = letras.concat(letra);
+  });
+  console.log("Las letras del usuario son: ", letras);
+  return letras;
+};
+
+
+// Función para comprobar si alguna letra es correcta y colorearla del color que corresponda:
+function compruebaLetraCorrecta(letras){
+  console.log("Función compruebaLetraCorrecta. Estoy en la fila ", filaActual, " y las letras son ", letras, "Las letras ocultas son: ", letrasOcultas);
   
-    if (letra === letrasOcultas[index]) { // Si la letra está bien posicionada en el mismo índice de letrasOcultas, colorea en verde.
+  for (let i = 0; i < letras.length; i++) {
+    if (letras[i] === letrasOcultas[i]) { // Si la letra está bien posicionada en el mismo índice de letrasOcultas, colorea en verde.
       console.log("Entra en verde")
-      $(this).css('background-color', 'green');
-    } else if (letrasOcultas.includes(letra)) { // Si la letra está incluida en el array, pero no está bien posicionada, colorea en amarillo.
+      $('#fila' + filaActual + '-columna' + i).css('background-color', 'green');
+    } else if (letrasOcultas.includes(letras[i])) { // Si la letra está incluida en el array, pero no está bien posicionada, colorea en amarillo.
       console.log("Entra en amarillo")
-      $(this).css('background-color', 'yellow');
+      $('#fila' + filaActual + '-columna' + i).css('background-color', 'yellow');
     } else { // Si no se cumple ninguno de los anteriores casos, colorea en gris.
       console.log("Entra en gris")
-      $(this).css('background-color', 'grey');
+      $('#fila' + filaActual + '-columna' + i).css('background-color', 'grey');
     };
-  });
+  };
 };
 
 // Función que habilita la siguiente fila:
@@ -70,11 +80,11 @@ $('#boton').click(function(){
   let inputsFilaActual = $(filas[filaActual]); // La primera vez devuelve: $(filas[0]) =  $('.fila-0')
 
   //Ejecuta la función compruebaFilaVacia con los inputs de html que están en la fila 0.
-  compruebaFilaVacia(inputsFilaActual);
 
   if(compruebaFilaVacia(inputsFilaActual) == false) { // Si es falso que la fila esté vacía, es decir, la fila está completa, ejecuta las siguientes funciones:
     console.log("La fila está completa");
-    compruebaLetraCorrecta(inputsFilaActual); // Ejecuta la función compruebaLetraCorrecta con los inputs de html que están en la fila 0.
+    let letrasEjcritas = letrasDelUsuario(inputsFilaActual); // la variable letrasDelUsuario es igual a las letras que me devuelve la función letrasDelUsuario.
+    compruebaLetraCorrecta(letrasEjcritas); // Ejecuta la función compruebaLetraCorrecta con las letras que ha escrito el usuario.
     habilitaSiguienteFila();
     filaActual++; // Modifica la variable filaActual sumándole 1. Ahora filaActual vale 1.
   } else { // Si la función compruebaFilaVacia es verdad que está vacía, salta el alert.
