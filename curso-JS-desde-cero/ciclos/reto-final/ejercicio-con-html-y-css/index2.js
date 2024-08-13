@@ -68,21 +68,29 @@ function compruebaLetraCorrecta(letras){
   };
 };
 
+function compruebaPalabraExiste(letras){
+  const palabraDelUsuario = letras.join('');
+  console.log("Función compruebaPalabraExiste. La palabra completa del usuario es:", palabraDelUsuario);
+
+  if (palabras.includes(palabraDelUsuario) == true){
+    return true;
+  }
+  return false
+}
+
 // Función que comprueba si la palabra completa es correcta:
 function compruebaPalabraCorrecta (letras) {
-  let palabraDelUsuario = letras;
-  for (let i = 0; i < letras.length; i++) {
-    palabraDelUsuario = letras.join('');
-  };
-  console.log("la palabraDelUsuario completa es:", palabraDelUsuario);
+  const palabraDelUsuario = letras.join('');
+  console.log("Función compruebaPalabraCorrecta. La palabraDelUsuario completa es:", palabraDelUsuario);
+
   if (filaActual === 4 && palabraDelUsuario !== palabraOculta) {
     console.log("Has perdido, la palabra oculta era", palabraOculta);
-    alert("Ooohhh has perdido :(, la palabra oculta era:" + palabraOculta);
+    alert("Ooohhh has perdido :(, la palabra oculta era: " + palabraOculta);
   } else if (palabraDelUsuario !== palabraOculta) {
     habilitaSiguienteFila()
     filaActual++
   } else if (palabraDelUsuario === palabraOculta) {
-    alert("YOU WIN!")
+    alert("Bieeeen has ganadooo!!!")
   };
 };
 
@@ -92,19 +100,26 @@ function habilitaSiguienteFila(){
   $(filas[filaActual+1]).removeAttr('disabled'); // Elimina el atributo "disabled" del array filas, en la posición fila actual + 1.
 };
 
+let letrasEscritas
 
 // Al hacer click en "enviar palabra":
 $('#boton').click(function(){
   let inputsFilaActual = $(filas[filaActual]); // La primera vez devuelve: $(filas[0]) =  $('.fila-0')
-  let letrasEscritas
 
   //Ejecuta la función compruebaFilaVacia con los inputs de html que están en la fila 0.
   if(compruebaFilaVacia(inputsFilaActual) == false) { // Si es falso que la fila esté vacía, es decir, la fila está completa, ejecuta las siguientes funciones:
     console.log("La fila está completa");
+
     letrasEscritas = letrasDelUsuario(inputsFilaActual); // la variable letrasDelUsuario es igual a las letras que me devuelve la función letrasDelUsuario.
+
+    if (compruebaPalabraExiste(letrasEscritas) == false) {
+      alert("La palabra introducida no exite");
+      return false
+    }
+
     compruebaLetraCorrecta(letrasEscritas); // Ejecuta la función compruebaLetraCorrecta con las letras que ha escrito el usuario.
-    compruebaPalabraCorrecta(letrasEscritas)
+    compruebaPalabraCorrecta(letrasEscritas);
   } else { // Si la función compruebaFilaVacia es verdad que está vacía, salta el alert.
-    alert("Por favor, introduce una palabra")
+    alert("Por favor, introduce una palabra");
   };
 });
