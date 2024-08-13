@@ -1,7 +1,7 @@
 // PRUEBA DE HACERLO CON html
 
 //Array con las palabras a adivinar:
-const palabras = ["abeja", "canal", "fresa", "latir", "pesca", "viral", "traza", "tonto", "torno", "cazar", "sufro", "suero", "cuero", "tacha", "señas", "roble", "rozan", "punta", "plano", "playa", "naipe", "marte", "fisio", "falsa", "falda"]
+const palabras = ["abeja", "canal", "fresa", "latir", "pesca", "viral", "traza", "tonto", "torno", "cazar", "sufro", "suero", "cuero", "tacha", "señas", "roble", "rozan", "punta", "plano", "playa", "naipe", "marte", "fisio", "falsa", "falda", "mente", "freno"]
 console.log('La lista de palabras asciende a:', palabras.length);
 
 // Selecciona una palabra al azar:
@@ -9,9 +9,18 @@ let idPalabraOculta = Math.floor(Math.random()*palabras.length);
 palabraOculta = palabras[idPalabraOculta];
 console.log('La palaba oculta es:', palabraOculta);
 
-//Array con las letras de la palabra oculta, para luego comprobar letra por letra:
+// Array con las letras de la palabra oculta, para luego comprobar letra por letra:
 let letrasOcultas = palabraOculta.split('');
 console.log("Las letras ocultas son:", letrasOcultas);
+
+// Saltar de un input a otro cuando llegue a su maxlenght:
+  $('input[type="text"]').on( 'input', function() {
+    console.log("Estoy pasando al siguiente input")
+      if ($(this).val().length >= $(this).attr('maxlength')) {
+          $(this).parent().next().children('input[type="text"]').focus();
+      }
+  });
+
 
 let filas = [".fila-0", ".fila-1", ".fila-2", ".fila-3", ".fila-4"];
 let filaActual = 0;
@@ -73,8 +82,10 @@ function compruebaPalabraExiste(letras){
   console.log("Función compruebaPalabraExiste. La palabra completa del usuario es:", palabraDelUsuario);
 
   if (palabras.includes(palabraDelUsuario) == true){
+    console.log("Función compruebaPalabraExiste. La palabra introducida SI existe")
     return true;
   }
+  console.log("Función compruebaPalabraExiste. La palabra introducida NO existe")
   return false
 }
 
