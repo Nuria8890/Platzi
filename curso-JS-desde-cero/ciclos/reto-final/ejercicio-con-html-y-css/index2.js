@@ -21,6 +21,19 @@ console.log("Las letras ocultas son:", letrasOcultas);
       }
   });
 
+// Al pulsar "enter", se simula el click en el botón:
+
+  $('input[type="text"]').keypress(function(event) {
+      if (event.which === 13) { // 13 es el código de la tecla Enter
+          event.preventDefault(); // Evita el comportamiento por defecto
+          $('#boton').click(); // Simula el clic en el botón
+      }
+  });
+
+  $('#miBoton').click(function() {
+      alert('¡Botón clickeado!');
+  });
+
 
 let filas = [".fila-0", ".fila-1", ".fila-2", ".fila-3", ".fila-4"];
 let filaActual = 0;
