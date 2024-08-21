@@ -1,0 +1,18 @@
+.TodoButton-div{
+  display: flex;
+  justify-content: center;
+  min-width: 500px;
+}
+
+.TodoButton {
+  
+  border-radius: 20px;
+  background-color: rgb(178, 178, 234);
+  padding: 10px;
+}
+
+button:hover {
+  background-color:  rgb(118, 118, 242);
+  cursor: pointer;
+  font-weight: bold;
+}
