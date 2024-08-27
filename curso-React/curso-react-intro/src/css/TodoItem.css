@@ -19,25 +19,3 @@
 .TodoItem-p--complete {
   text-decoration: line-through;
 }
-
-.Icon {
-  margin: 0px 15px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.Icon-check--active {
-  color: green;
-}
-
-.Icon-check--active:hover {
-  color: green;
-}
-
-/* .Icon-delete {
-  color: red;
-} */
-
-.Icon-delete:hover {
-  color: red;
-}

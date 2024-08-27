@@ -1,0 +1,20 @@
+.Icon {  
+  margin: 15px;
+  cursor: pointer;
+}
+
+.Icon-check--active {
+  color: green;
+}
+
+.Icon-check:hover {
+  color: green;
+}
+
+/* .Icon-delete {
+  color: red;
+} */
+
+.Icon-delete:hover {
+  color: red;
+}
