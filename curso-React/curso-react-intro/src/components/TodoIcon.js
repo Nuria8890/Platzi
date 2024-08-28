@@ -8,14 +8,15 @@ const iconTypes = {
   "delete": <MdDelete />
 }
 
-function TodoIcon({ type }) {
+function TodoIcon({ type, onClick, completed }) {
   return (
-    <IconContext.Provider value={{size: "25px" }}>
-    <span
-      className={`Icon Icon-${type}`}
-    >
-      {iconTypes[type]}
-    </span>
+    <IconContext.Provider value={{ size: "25px" }}>
+      <span
+        className={`Icon Icon-${type} ${completed && "Icon-p--complete"}`}
+        onClick={onClick}
+      >
+        {iconTypes[type]}
+        </span>
     </IconContext.Provider>
   )
 }

@@ -3,17 +3,13 @@
   cursor: pointer;
 }
 
-.Icon-check--active {
+.Icon-p--complete {
   color: green;
 }
 
 .Icon-check:hover {
   color: green;
 }
-
-/* .Icon-delete {
-  color: red;
-} */
 
 .Icon-delete:hover {
   color: red;
