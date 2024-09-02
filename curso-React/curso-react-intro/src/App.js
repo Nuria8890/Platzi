@@ -2,7 +2,7 @@
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
-import { TodoItem } from './components/TodoItem';
+import { TodoItem } from './TodoItem';
 import { TodoButton } from './TodoButton';
 import React from 'react';
 
