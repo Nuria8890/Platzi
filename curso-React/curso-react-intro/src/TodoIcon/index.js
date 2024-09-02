@@ -1,7 +1,7 @@
 import { IconContext } from "react-icons";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import "../css/TodoIcon.css"
+import "./TodoIcon.css"
 
 const iconTypes = {
   "check": <FaCheckCircle />,
