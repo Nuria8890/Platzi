@@ -1,5 +1,5 @@
 
-import { TodoCounter } from './components/TodoCounter';
+import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './components/TodoSearch';
 import { TodoList } from './components/TodoList';
 import { TodoItem } from './components/TodoItem';
