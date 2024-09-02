@@ -19,4 +19,4 @@ function TodoSearch({
   );
 }
 
-export {TodoSearch}
+export { TodoSearch }

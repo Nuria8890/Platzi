@@ -21,4 +21,4 @@ function TodoIcon({ type, onClick, completed }) {
   )
 }
 
-export {TodoIcon}
+export { TodoIcon }
