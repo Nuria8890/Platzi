@@ -5,10 +5,10 @@
 }
 
 .TodoButton {
-  
   border-radius: 20px;
   background-color: rgb(178, 178, 234);
   padding: 10px;
+  z-index: 1;
 }
 
 button:hover {

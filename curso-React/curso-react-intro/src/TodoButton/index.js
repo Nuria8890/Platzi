@@ -1,22 +1,19 @@
 import './TodoButton.css';
 
-function TodoButton() {
+function TodoButton({ setOpenModal }) {
   return(
     <div className='TodoButton-div'>
       <button
         className='TodoButton'
         onClick={
-          (event) => {
-            console.log("Has hecho click en 'Añadir otra tarea'");
-            console.log(event);
-            console.log(event.target);
+          () => {
+            setOpenModal(state => !state);
           }
         }
       >Añade otra tarea
       </button>
     </div>
-    
   );
 }
 
-export { TodoButton }
+export { TodoButton };
