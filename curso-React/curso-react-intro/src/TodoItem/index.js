@@ -5,7 +5,7 @@ import { DeleteIcon } from "../TodoIcon/DelteIcon";
 
 function TodoItem(props) {
   return(
-    <li className='TodoItem'>
+    <li className={`TodoItem ${props.completed &&"TodoItem-complete"}`}>
       <CompleteIcon
         onComplete={props.onComplete}
         completed={props.completed === true}
