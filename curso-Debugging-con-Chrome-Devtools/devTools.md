@@ -1,4 +1,4 @@
-# Concepto
+## Concepto
 
 Debugging: proceso de encontrar y resolver defectos o problemas dentro de un programa que impide el funcionamiento correcto del programa.
 
@@ -69,3 +69,73 @@ En el botón de recargar, si lo dejo pulsado puedo:
 ## Lighthouse o Audits
 
 elegir movil y ordenador y dar a auditoría y ver qué puntos se pueden mejorar.
+
+## Cómo hacer aplicaciones web progresivas
+
+https://developers.google.com/codelabs/pwa-training/pwa03--going-offline?hl=es#0
+
+## Examen
+
+1. ¿Cómo podría visualizar la paleta de colores que mi proyecto está utilizando?
+
+- Desde la sección de estilos, al tener un elemento que tenga aplicado algún color, dándole clic al cuadro de color que aparece ahí, tendremos la opción de Page colors que hace referencia a la paleta de colores del proyecto.
+
+2. ¿Donde puedo ver si mis elementos de HTML tienen algún estado de CSS?
+
+- Seleccionando ese elemento y viendo sus estilos.
+
+3. ¿De qué forma puedo buscar palabras específicas en mi documento html, desde el inspector de elementos?
+
+- Presionando “comand/ctrl + F” desde la casilla de Elements
+
+4. ¿Qué tipo de interacción podemos tener en la sección de Elements?
+
+- Manipulación de nuestro HTML.
+
+5. ¿Cuáles son los navegadores que tienen herramientas para desarrolladores?
+
+- Todos los navegadores tienen herramientas para desarrolladores.
+
+6. ¿Cuál es la forma más rápida de generar sombras a mis elementos de html?
+
+- Desde la sección de estilos, al momento de estar modificando los estilos de algún elemento, tendremos un icono de 3 puntos que hace referencia a un menú, ahí encontraremos la opción para poder agregar sombras a elementos y texto.
+
+7. Si yo NO tengo la sección de Animación en mi DevTools, ¿Cómo puedo visualizarla?
+
+- En la parte de menú de tu devtools, tengo que ir a más herramientas “More Tools”, y ahí buscar por Animaciones.
+
+8. ¿Cuál es la sección en la que puedo tener visibilidad del todo el código que no estoy utilizando en un proyecto?
+
+- Desde la sección de “Coverage” yo puedo tener visibilidad del código que está en mi proyecto, pero no es necesario porque no lo utilizo.
+
+9. ¿Para qué puedo utilizar el $0 en la consola de DevTools?
+
+- Me sirve para ver cual es el elemento de HTML que estoy seleccionando.
+
+10. ¿Qué es el JS Path que obtenemos de cada elementos de HTML?
+
+- Es la selección que hacemos a un nodo o elemento del DOM específico con JS
+
+11. ¿Cómo podría cargar mi proyecto desde local, para comenzar a guardar los cambios desde DevTools?
+
+NO --> Desde source, verás que ya hay algunos archivos, esos son tus archivos locales, y todos los cambios se guardan de forma automática
+
+- ¿? Directamente desde la sección de sources seleccionamos “Filesystem” y “agregar un folder a mi espacio de trabajo”
+
+12. ¿Si en mi proyecto estoy utilizando un preprocesador de css como “Stylus”, y utilizo DevTools como IDE, puedo seguir trabajando desde ahí con Stylus?
+
+No --> No, de momento Chrome DevTools, solo entiende Sass.
+
+- ¿? Claro, DevTools, te dejará trabajar con todos los preprocesadores de CSS.
+
+13. ¿Cuáles son las estrategias que existen para poder trabajar proyectos responsive?
+
+- Por viewport de dispositivo, o por diseño.
+
+14. Si tengo un error en mi código que se dispara al momento de mandar llamar una función que está ligada a un botón, ¿cómo podría llegar a esa función para comenzar a debuggear el código?
+
+- Tendríamos que comenzar con el evento de click en ese botón.
+
+15. ¿Para qué utilizamos “Network” en DevTools?
+
+- Esto nos sirve para poder ver ¿qué archivos y assets se están descargando, el estatus, el peso y tiempo de descarga de los mismos?
