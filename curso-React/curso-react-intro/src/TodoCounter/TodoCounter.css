@@ -11,3 +11,13 @@
   margin: 3px;
   font-weight: bold;
 }
+
+@media (max-width: 600px) {
+  .TodoCounter {
+    font-size: 20px;
+    padding: 24px 16px;
+    min-width: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

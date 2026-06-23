@@ -17,3 +17,17 @@ button:hover {
   cursor: pointer;
   font-weight: bold;
 }
+
+@media (max-width: 600px) {
+  .TodoButton-div {
+    min-width: auto;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .TodoButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}

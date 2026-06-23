@@ -11,3 +11,17 @@
   align-items: flex-start;
   padding: 0;
 }
+
+@media (max-width: 600px) {
+  .TodoList-div {
+    min-width: auto;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .TodoList {
+    width: 100%;
+    align-items: center;
+  }
+}

@@ -24,3 +24,11 @@
 .TodoItem-complete {
   box-shadow: 0px 5px 5px green;
 }
+
+@media (max-width: 600px) {
+  .TodoItem {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+}
